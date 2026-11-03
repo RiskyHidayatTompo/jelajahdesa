@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jelajah Desa | Wisata Alam, Budaya, dan Kuliner Desa</title>
+<meta name="description" content="Platform promosi wisata desa: alam, budaya, tradisi, dan kuliner lokal.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jelajah Desa | Temukan Keindahan Tersembunyi">
+<meta property="og:description" content="Wisata alam, budaya, dan kuliner desa yang menunggu untuk Anda jelajahi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip" href="#konten">Lewati ke konten</a>
+
+<nav class="navbar navbar-expand-lg fixed-top" id="nav">
+  <div class="container">
+    <a class="navbar-brand brand" href="#beranda"><span class="js-logo"><i class="bi bi-tree-fill"></i> </span><span class="js-name">Jelajah Desa</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Buka menu"><i class="bi bi-list"></i></button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav mx-auto gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#destinasi">Destinasi Wisata</a></li>
+        <li class="nav-item"><a class="nav-link" href="#aktivitas">Aktivitas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Desa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0"><a class="btn btn-leaf" href="#destinasi">Jelajahi Wisata</a>
+      <a class="btn btn-sm login-btn" href="admin/login.html" title="Masuk sebagai admin"><i class="bi bi-person-lock"></i> Login</a></div>
+    </div>
+  </div>
+</nav>
+
+<main id="konten">
+<header class="hero" id="beranda">
+  <img class="hero-img" src="assets/images/hero.jpg" alt="Hamparan sawah dan perbukitan hijau di desa wisata" data-i="0" fetchpriority="high">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <span class="tag hero-in" style="--d:0s"><i class="bi bi-geo-alt-fill"></i> Destinasi Wisata Lokal</span>
+    <h1 class="hero-in" style="--d:.15s" id="heroTitle">Temukan Keindahan Tersembunyi di Desa Kami</h1>
+    <p class="hero-in" style="--d:.3s" id="heroDesc"></p>
+    <div class="d-flex flex-wrap gap-3 hero-in" style="--d:.45s">
+      <a href="#destinasi" class="btn btn-leaf btn-lg">Jelajahi Destinasi</a>
+      <a href="#galeri" class="btn btn-ghost btn-lg">Lihat Galeri</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="tentang">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 reveal" id="aboutText">
+        <h2 class="title">Desa kecil dengan cerita yang besar</h2>
+        <p class="demo-note"><i class="bi bi-info-circle"></i> Teks contoh. Ganti dengan data desa sebenarnya lewat menu Kelola Tentang Desa.</p>
+        <p>Desa kami berada di kaki perbukitan dengan udara sejuk dan lahan pertanian yang luas. Menurut cerita warga, desa ini dibuka oleh para petani pertama yang menetap di tepi sungai.</p>
+        <ul class="list-unstyled about-list">
+          <li><i class="bi bi-tree"></i><span><b>Alam:</b> air terjun, sungai jernih, dan jalur bukit yang bisa ditempuh santai.</span></li>
+          <li><i class="bi bi-people"></i><span><b>Budaya:</b> gotong royong, tarian, dan upacara panen yang diadakan setiap tahun.</span></li>
+          <li><i class="bi bi-cup-hot"></i><span><b>Keunggulan:</b> wisata dikelola warga, dengan homestay dan pemandu lokal.</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-6 reveal">
+        <img class="about-img" id="aboutImg" src="assets/images/tentang.jpg" alt="Suasana kampung dan warga desa" data-i="2" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Statistik desa">
+  <div class="container"><div class="row g-4 text-center" id="stats"></div></div>
+</section>
+
+<section class="section" id="destinasi">
+  <div class="container">
+    <div class="head reveal"><h2 class="title">Destinasi Wisata Unggulan</h2></div>
+    <div class="filters mb-4" id="filters" role="group" aria-label="Filter kategori"></div>
+    <div class="row g-4" id="destGrid"></div>
+  </div>
+</section>
+
+<section class="section bg-cream" id="aktivitas">
+  <div class="container">
+    <div class="head reveal"><h2 class="title">Yang Bisa Anda Lakukan</h2></div>
+    <div class="row g-4" id="actGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="galeri">
+  <div class="container">
+    <div class="head reveal"><h2 class="title">Galeri Desa</h2>
+    <p class="text-muted">Klik foto untuk memperbesar.</p></div>
+    <div class="masonry" id="gallery"></div>
+  </div>
+</section>
+
+<section class="section bg-cream" id="testimoni">
+  <div class="container">
+    <div class="head reveal"><h2 class="title">Cerita Pengunjung</h2></div>
+    <div class="row g-4" id="testi"></div>
+  </div>
+</section>
+
+<section class="section" id="berita" hidden><div class="container">
+  <div class="head reveal d-flex flex-wrap align-items-end gap-3"><h2 class="title mb-0">Berita Terbaru</h2><a class="ms-auto" href="artikel.html">Lihat semua berita</a></div>
+  <div class="row g-4" id="newsGrid"></div>
+</div></section>
+
+<section class="section" id="kontak">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5 reveal">
+        <h2 class="title">Rencanakan Kunjungan</h2>
+        <p class="demo-note" id="locNote"><i class="bi bi-info-circle"></i> Lokasi dan kontak masih placeholder. Isi lewat menu Kelola Informasi Lokasi dan Kelola Kontak.</p>
+        <ul class="list-unstyled about-list" id="info"></ul>
+        <a id="mapBtn" class="btn btn-forest" href="#" target="_blank" rel="noopener"><i class="bi bi-map"></i> Buka di Google Maps</a>
+      </div>
+      <div class="col-lg-7 reveal">
+        <form id="form" class="card-box" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="nama">Nama</label><input class="form-control" id="nama" required minlength="3" autocomplete="name"><div class="invalid-feedback">Isi nama minimal 3 huruf.</div></div>
+            <div class="col-md-6"><label class="form-label" for="hp">Nomor telepon</label><input class="form-control" id="hp" inputmode="tel" required placeholder="08123456789" autocomplete="tel"><div class="invalid-feedback">Gunakan nomor Indonesia, misalnya 08123456789.</div></div>
+            <div class="col-md-6"><label class="form-label" for="email">Email (opsional)</label><input class="form-control" id="email" type="email" autocomplete="email"><div class="invalid-feedback">Format email belum benar.</div></div>
+            <div class="col-md-6"><label class="form-label" for="dest">Destinasi</label><select class="form-select" id="dest" required></select><div class="invalid-feedback">Pilih destinasi.</div></div>
+            <div class="col-md-6"><label class="form-label" for="jumlah">Jumlah pengunjung</label><input class="form-control" id="jumlah" type="number" min="1" max="100" value="2" required><div class="invalid-feedback">Isi 1 sampai 100 orang.</div></div>
+            <div class="col-md-6"><label class="form-label" for="tgl">Tanggal kunjungan</label><input class="form-control" id="tgl" type="date" required><div class="invalid-feedback">Pilih tanggal hari ini atau setelahnya.</div></div>
+            <div class="col-12"><label class="form-label" for="pesan">Pesan tambahan</label><textarea class="form-control" id="pesan" rows="3" maxlength="1000"></textarea></div>
+            <div class="col-12"><input id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+            <div class="d-flex flex-wrap gap-2"><button class="btn btn-forest flex-fill" type="submit" id="saveBtn"><i class="bi bi-send"></i> Kirim Permintaan Kunjungan</button><button class="btn btn-wa flex-fill" type="submit" id="waBtn"><i class="bi bi-whatsapp"></i> Kirim lewat WhatsApp</button></div>
+            <small class="text-muted d-block mt-2">Permintaan tersimpan di sistem pengelola, tetapi belum berarti reservasi terkonfirmasi. Pengelola akan menghubungi Anda. Tombol WhatsApp membuka pesan siap kirim tanpa menyimpan data.</small></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4"><div class="brand mb-2"><span class="js-logo"><i class="bi bi-tree-fill"></i> </span><span class="js-name">Jelajah Desa</span></div><p id="footDesc"></p></div>
+      <div class="col-6 col-lg-2"><h3>Navigasi</h3><ul class="list-unstyled"><li><a href="#beranda">Beranda</a></li><li><a href="#destinasi">Destinasi</a></li><li><a href="#aktivitas">Aktivitas</a></li><li><a href="#galeri">Galeri</a></li><li><a href="artikel.html">Berita</a></li><li><a href="#kontak">Kontak</a></li></ul></div>
+      <div class="col-6 col-lg-3"><h3>Kontak</h3><ul class="list-unstyled" id="footInfo"></ul></div>
+      <div class="col-lg-3"><h3>Media sosial</h3><div class="d-flex gap-3 fs-4">
+        <a id="soc-instagram" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a id="soc-facebook" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a id="soc-youtube" href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div>
+        <small class="d-block mt-2 opacity-75" id="socNote">Ganti dengan akun desa lewat menu Kelola Kontak.</small></div>
+    </div>
+    <hr><div class="d-flex flex-wrap justify-content-between small"><span>&copy; <span id="year"></span> <span id="copy">Jelajah Desa. Hak cipta dilindungi.</span></span><a href="admin/login.html" class="me-3">Login Admin</a><span id="credit">Dikembangkan oleh [Nama Pengembang]</span></div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
+
+<div class="modal fade" id="modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content">
+    <div class="modal-header border-0 pb-0"><h2 class="modal-title fs-5" id="modalTitle"></h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div></div>
+</div>
+<div class="toast-container position-fixed bottom-0 start-0 p-3" id="toasts" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
